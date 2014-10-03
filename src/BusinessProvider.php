@@ -11,7 +11,12 @@ abstract class BusinessProvider
         $this->app = $app;
     }
 
+    abstract function register();
+
     public function boot(){}
 
-    abstract function register();
+    public static function provides()
+    {
+        return array();
+    }
 }
