@@ -15,7 +15,7 @@ abstract class BusinessProvider
 
     public function boot(){}
 
-    public static function provides()
+    public function provides()
     {
         return array();
     }
