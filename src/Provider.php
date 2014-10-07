@@ -2,7 +2,7 @@
 
 namespace Rde;
 
-abstract class BusinessProvider
+abstract class Provider
 {
     protected $app;
 

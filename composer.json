@@ -1,6 +1,6 @@
 {
-    "name": "rde/business-provider",
-    "description": "業務系統",
+    "name": "rde/provider",
+    "description": "服務註冊",
     "authors": [
         {
             "name": "Colin",
