@@ -11,12 +11,24 @@ abstract class Provider
         $this->app = $app;
     }
 
-    abstract function register();
-
-    public function boot(){}
+    abstract public function register();
 
     public function provides()
     {
         return array();
+    }
+
+    /**
+     * 攔截錯誤呼叫
+     *
+     * @param $method
+     * @param $args
+     * @throws \BadMethodCallException
+     */
+    public function __call($method, $args)
+    {
+        if ($method == 'boot') return;
+
+        throw new \BadMethodCallException("呼叫未定義方法 [{$method}]");
     }
 }

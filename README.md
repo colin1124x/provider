@@ -9,3 +9,34 @@
 [![Total Downloads](https://poser.pugx.org/rde/provider/downloads.svg)](https://packagist.org/packages/rde/provider)
 [![Latest Unstable Version](https://poser.pugx.org/rde/provider/v/unstable.svg)](https://packagist.org/packages/rde/provider)
 [![License](https://poser.pugx.org/rde/provider/license.svg)](https://packagist.org/packages/rde/provider)
+
+### 使用
+#### 製作一個service provider
+
+*class*
+```
+class MyService extends Rde\Provider
+{
+    public function register()
+    {
+        $this->app['my.service'] = function($app){
+            return new ReadObject;
+        };
+    }
+    
+    public function providers()
+    {
+        return array('my.service');
+    }
+    
+    // if you need...
+    public function boot()
+    {
+        ReadObjectManager::setSomeConfig($this->app['config']['any']);
+    }
+}
+```
+
+```
+
+```
