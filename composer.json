@@ -1,6 +1,7 @@
 {
     "name": "rde/provider",
     "description": "服務註冊",
+    "license": "MIT",
     "authors": [
         {
             "name": "Colin",
