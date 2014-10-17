@@ -4,7 +4,7 @@ class ProviderTest extends PHPUnit_Framework_TestCase
 {
     public function testRegister()
     {
-        $app = new Rde\Application();
+        $app = new Rde\Container();
 
         $provider = new Fake\MyServiceProvider($app);
 
@@ -22,7 +22,7 @@ class ProviderTest extends PHPUnit_Framework_TestCase
      */
     public function testException()
     {
-        $app = new Rde\Application();
+        $app = new Rde\Container();
 
         $provider = new Fake\MyServiceProvider($app);
 
